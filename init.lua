@@ -166,7 +166,16 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter',
     },
   },
-
+  {
+    "nvim-tree/nvim-web-devicons",
+    config = function ()
+      require("nvim-web-devicons"):setup({})
+    end,
+  },
+  {
+    'sindrets/diffview.nvim',
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
   { import = 'custom.plugins' },
 }, {})
 
